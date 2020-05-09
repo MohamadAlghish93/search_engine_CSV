@@ -9,6 +9,10 @@ from sklearn.metrics.pairwise import cosine_similarity
 import string # to process standard python strings
 # Preprocessing
 
+nltk.download('popular', quiet=True) # for downloading packages
+nltk.download('punkt') # first-time use only
+nltk.download('wordnet') # first-time use only
+
 lemmer = WordNetLemmatizer()
 def LemTokens(tokens):
     return [lemmer.lemmatize(token) for token in tokens]
